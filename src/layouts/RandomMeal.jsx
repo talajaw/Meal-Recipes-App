@@ -2,7 +2,7 @@
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRandomMeal } from "../redux/mealSlice.jsx";
-import Button from "../components/Button.jsx";
+//import Button from "../components/Button.jsx";
 
 const RandomMeal = () => {
   const dispatch = useDispatch();
@@ -18,28 +18,24 @@ const RandomMeal = () => {
   // }
 
   return (
-    <>
-      <Button onClick={() => handleRandomMeal()} label="Get Random Meal" />
+   <div className="text-center">
+       <button
+    onClick={handleRandomMeal}
+    className="px-6 py-3  bg-emerald-700 opacity-85 text-white font-semibold  rounded-md shadow-lg hover:scale-105 transform transition"
+  >
+    🎲 Get Random Meal
+  </button>
      {/* only displays the meal details when a random meal has been fetched by clicking the button. */}
-      { randomMeal && (<div className=" mt-5 flex flex-col items-center md:flex-row space-x-4 p-4 border border-gray-700 rounded-lg shadow-lg">
-      {/* Meal Image */}
-      <div className="relative mb-4 md:mb-0  md:w-1/3">
-        <img 
-          src={randomMeal.strMealThumb} 
-          alt={randomMeal.strMeal} 
-          className="w-full h-80 object-cover rounded transition-transform duration-300 ease-in-out transform hover:scale-105" 
-        />
-      </div>
-      
-      {/* Meal Details */}
-      <div className="flex flex-col justify-between md:w-2/3 ">
-        <h2 className="text-xl text-stone-600 font-bold">{randomMeal.strMeal}</h2>
-        <p className="mt-2 text-stone-600 font-medium">{randomMeal.strInstructions}</p>
-        {/* Add more details about the random meal if needed */}
+     {randomMeal && (
+    <div className="mt-8 flex flex-col md:flex-row items-center gap-6 bg-white/30 backdrop-blur-md rounded-2xl shadow-lg p-6 border border-white/20">
+      <img src={randomMeal.strMealThumb} alt={randomMeal.strMeal} className="w-full md:w-1/3 h-64 object-cover rounded-xl shadow-md" />
+      <div className="md:w-2/3 text-left">
+        <h2 className="text-2xl font-bold text-gray-800">{randomMeal.strMeal}</h2>
+        <p className="mt-3 text-gray-800 leading-relaxed">{randomMeal.strInstructions}</p>
       </div>
     </div>
-      )}
-    </>
+  )}
+    </div>
   );
 };
 

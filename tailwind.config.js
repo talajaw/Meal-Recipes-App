@@ -11,7 +11,9 @@ export default {
   ],
   theme: {
     
-    extend: {}
+    extend: { fontFamily: {
+        dancing: ["Dancing Script", "cursive"],
+      },}
     },
   
 

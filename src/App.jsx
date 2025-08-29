@@ -16,7 +16,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 function App() {
   return (
     <Router>
-      <div className="container mx-auto p-4 bg-green-500 dark:bg-gray-900 transition duration-300 ease-in-out">
+      <div className="container mx-auto p-4 bg-gradient-to-r from-green-600 via-emerald-500 to-teal-500 transition duration-300 ease-in-out">
        
         <Layout>
 

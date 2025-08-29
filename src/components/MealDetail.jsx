@@ -17,12 +17,12 @@ const MealDetail = () => {
     fetchMealsByCategory();
   }, [category]);
 
-  if (!meals) return <p>Loading...</p>;
+  if (!meals) return <p className=' text-gray-200 '>Loading...</p>;
 
   return (
     <div>
-      <h2 className="text-2xl font-bold dark:text-stone-400 mt-6">{category} Recipes</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 dark:text-stone-400  items-center  border-none  ">
+      <h2 className="text-3xl font-bold  dark:text-stone-200 mt-6 mb-6">{category} Recipes</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 dark:text-stone-200  items-center  border-none  ">
         {meals.map(meal => (
           <MealCard key={meal.idMeal} meal={meal} />
         ))}

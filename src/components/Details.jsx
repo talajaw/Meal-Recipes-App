@@ -6,11 +6,11 @@ const Details = () => {
   const mealDetail = useSelector((state) => state.meal.mealDetail); // Get meal detail from Redux store
 
   if (!mealDetail) {
-    return <p>No details available.</p>; // Show loading message or placeholder
+    return <p className=' text-gray-200'>No details available.</p>; // Show loading message or placeholder
   }
 
   return (
-    <div className="flex flex-col md:flex-row border border-gray-800 rounded-lg shadow-lg p-5">
+    <div className="flex flex-col md:flex-row border border-emerald-500 shadow-xl rounded-lg  p-5">
     {/* Meal Image */}
     <div className="w-full md:w-1/3">
       <img 
@@ -21,7 +21,7 @@ const Details = () => {
     </div>
     
     {/* Meal Details */}
-    <div className="w-full md:w-2/3 p-4 text-stone-600">
+    <div className="w-full md:w-2/3 p-4 text-stone-200">
       <h2 className="text-2xl font-bold">{mealDetail.strMeal}</h2>
       <h3 className="text-xl mt-4">Instructions:</h3>
       <p>{mealDetail.strInstructions}</p>

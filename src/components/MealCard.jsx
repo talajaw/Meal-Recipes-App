@@ -20,7 +20,7 @@ const MealCard = ({ meal }) => {
   };
 
   return (
-    <div className="border border-zinc-600 rounded-lg overflow-hidden shadow-lg flex flex-col h-64">
+    <div className="border border-emerald-500 shadow-2xl rounded-lg overflow-hidden  flex flex-col h-64">
       {" "}
       {/* Fixed height for uniformity */}
       <img
@@ -35,7 +35,7 @@ const MealCard = ({ meal }) => {
         <Link to={`/meal/${meal.idMeal}`}>
           <button
             onClick={handleSeeMoreDetails}
-            className="bg-green-800 text-white px-2 py-1  rounded hover:bg-green-600 "
+            className=" bg-emerald-700 opacity-95 text-white px-2 py-1  rounded hover:opacity-85 "
           >
             See More Details
           </button>

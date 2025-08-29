@@ -11,7 +11,7 @@ const Bar = () => {
   };
 
   return (
-    <div className="bg-gray-900 p-4">
+    <div className=" p-4">
       {/* Hamburger Menu for Small and Medium Screens */}
       <div className="md:hidden flex justify-end items-center">
         
@@ -31,19 +31,19 @@ const Bar = () => {
 
       {/* Menu Items for Large Screens */}
       <div className="hidden md:flex md:justify-center  lg:justify-end md:space-x-10   ">
-        <Link to="/" className="text-green-800  font-semibold hover:text-white hover:border-b-2 hover:border-green-700 drop-shadow-xl  ">Home</Link>
-        <Link to="/about" className="text-green-800 font-semibold hover:text-white  hover:border-b-2 hover:border-green-400">About</Link>
-        <Link to="/support" className="text-green-800 font-semibold hover:text-white  hover:border-b-2 hover:border-green-400">Support</Link>
-        <Link to="/contact" className="text-green-800 font-semibold hover:text-white  hover:border-b-2 hover:border-green-400">Contact Us</Link>
+        <Link to="/" className=" text-gray-200 font-semibold hover:text-white hover:border-b-2 hover:border-yellow-200 drop-shadow-xl  ">Home</Link>
+        <Link to="/about" className="text-gray-200 font-semibold hover:text-white  hover:border-b-2 hover:border-yellow-200">About</Link>
+        <Link to="/support" className="text-gray-200 font-semibold hover:text-white  hover:border-b-2 hover:border-yellow-200">Support</Link>
+        <Link to="/contact" className="text-gray-200 font-semibold hover:text-white  hover:border-b-2 hover:border-yellow-200">Contact Us</Link>
       </div>
 
       {/* Dropdown Menu for Small Screens */}
       {isOpen && (
         <div className="md:hidden flex flex-col mt-2 space-y-2">
-          <Link to="/" className="block text-white bg-gray-700 p-2 rounded hover:bg-gray-600">Home</Link>
-          <Link to="/about" className="block text-white bg-gray-700 p-2 rounded hover:bg-gray-600">About</Link>
-          <Link to="/support" className="block text-white bg-gray-700 p-2 rounded hover:bg-gray-600">Support</Link>
-          <Link to="/contact" className="block text-white bg-gray-700 p-2 rounded hover:bg-gray-600">Contact Us</Link>
+          <Link to="/" className="block text-white  bg-emerald-400 p-2 rounded hover:bg-emerald-300">Home</Link>
+          <Link to="/about" className="block text-white bg-emerald-400 p-2 rounded hover:bg-emerald-300">About</Link>
+          <Link to="/support" className="block text-white bg-emerald-400 p-2 rounded hover:bg-emerald-300">Support</Link>
+          <Link to="/contact" className="block text-white bg-emerald-400 p-2 rounded hover:bg-emerald-300">Contact Us</Link>
         </div>
       )}
     </div>

@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { searchMeals } from "../redux/mealSlice.jsx";
 import Input from "../components/Input.jsx";
 
+
 const SearchBar = () => {
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState("");
@@ -45,21 +46,25 @@ const SearchBar = () => {
   }, [suggestions]);
 
   return (
-    <div>
+    <div className="relative w-full md:w-1/2 ">
+    
+      
       <Input
         value={searchTerm}
         onChange={handleSearch}
-        placeholder="Search meals..."
+        placeholder="🔍Search meals..."
       />
-      <ul>
+    
+   
+      <ul className="absolute mt-2 w-full bg-white rounded-xl shadow-lg max-h-60 overflow-y-auto">
         {memoizedSuggestions.map((meal) => (
-          <li key={meal.id}>
+          <li key={meal.id} className="flex items-center p-2 hover:bg-gray-100 transition cursor-pointer">
             <img
               src={meal.thumbnail}
               alt={meal.name}
-              className="inline-block mb-2 dark:text-stone-200  w-10 h-10 rounded-full"
+              className="w-10 h-10 rounded-full"
             />
-            <span className="dark:text-stone-300 ml-4">{meal.name}</span>
+            <span className="ml-4 text-gray-700">{meal.name}</span>
           </li>
         ))}
       </ul>
